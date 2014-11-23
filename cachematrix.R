@@ -28,8 +28,9 @@ cacheSolve <- function(x, ...) {
         }
         mat.data <- x$get()
         i <- solve(mat.data, ...)
+        x$setinverse(i)
+        ## Return a matrix that is the inverse of 'x'
         i
 }        
  
-        ## Return a matrix that is the inverse of 'x'
-}
+
